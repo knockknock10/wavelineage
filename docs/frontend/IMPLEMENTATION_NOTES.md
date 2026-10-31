@@ -15,8 +15,8 @@
 - Multipart source registration and candidate alignment requests.
 - Explicitly confirmed source deletion through the newly documented DELETE endpoint, with no secure-erasure promise.
 - Browser-only waveform preview generated from the selected local file, explicitly labeled preview-only.
-- Candidate-to-source interval display driven only by API-reported segments.
-- Separate manifest signature, exact-file integrity and AI alignment presentation.
+- Candidate-to-source interval display driven only by API-reported segments; malformed, negative, zero-length or partial intervals are not rendered as valid mappings.
+- Separate manifest signature, exact-file integrity and AI alignment presentation; source changes clear any previous manifest-verification result.
 - Per-result encoder revision, method label, threshold-profile identifier/digest and explicit calibration flag display.
 - Download-first report action until backend HTML escaping/content-disposition guarantees are specified.
 - Threshold profile status warnings and explicit caveats.
@@ -35,7 +35,7 @@
 
 - `npm test` (`node --test tests/*.test.js`): **7/7 passed**.
 - JSX/JS syntax parse using the installed TypeScript transpiler: **6 source files parsed without syntax diagnostics**. This is a syntax check, not a Vite production build.
-- `npm run build`: **not completed** — Vite is not installed in the preparation environment. Do not treat this as a successful production build.
+- `npm run build`: **not completed** — Vite is not installed in the preparation environment. An `npm install --ignore-scripts --no-audit --no-fund` attempt timed out before dependencies were available. Do not treat this as a successful production build.
 - Backend integration is pending a published backend source tree and representative API response fixtures. The public repository tree was documentation-only when this implementation was prepared.
 
 ## Applying the bundle
