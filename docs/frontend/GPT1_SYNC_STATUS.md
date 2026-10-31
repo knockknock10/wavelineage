@@ -7,14 +7,14 @@
 Repository: https://github.com/knockknock10/wavelineage
 
 - `main` head: `98dcd57224f178152f69c8e57149b479ff6bf082`.
-- `gpt2/frontend` head before this synchronization-note update: `b4dac070c27428bcbcec91e2fed167160188b335`.
+- `gpt2/frontend` head before this sync-note update: `c572818ace7e298cc286cc14c77fa3cb8ee72c4d`.
 - The recursive tree on `main` contained only:
   - `.github/COLLABORATION.md`
   - `docs/API_CONTRACT.md`
   - `docs/FRONTEND_HANDOFF.md`
-- No Python backend, benchmark runner, test suite, frontend app, dependency metadata, license file or CI workflow was visible on `main` at this check.
+- No Python backend, benchmark runner, test suite, frontend application, dependency metadata, license file or CI workflow was visible on `main` at this check.
 - No pull requests were listed.
-- The latest visible main commit had no workflow runs and no combined status checks reported by GitHub.
+- The latest visible main commit had no workflow runs and no combined status checks returned by GitHub.
 
 ## GPT 1's separately supplied progress report
 
@@ -24,10 +24,12 @@ These are reported local-workspace results, not independently verified public-re
 
 ## GPT 2's public branch work
 
-The `gpt2/frontend` branch contains these GPT 2-owned documents:
+The `gpt2/frontend` branch contains GPT 2-owned integration/review documents:
 - `docs/frontend/API_GAP_REGISTER.md`
 - `docs/frontend/IMPLEMENTATION_NOTES.md`
 - `docs/frontend/GPT1_SYNC_STATUS.md`
+
+Recent GPT 2 documentation commits include `62a65f7`, `8884269`, `23f456d`, `b4dac07`, `0bdffec`, `013a3a6`, `e9dbc71` and `c572818`.
 
 The React source implementation is supplied separately as `WaveLineage-GPT2-Frontend.zip`. It is not yet present as source files in the public branch. The bundle contains only GPT 2-owned paths: `apps/web/` and `docs/frontend/`.
 
