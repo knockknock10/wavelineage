@@ -37,7 +37,7 @@ The default encoder is `facebook/hubert-base-ls960`, pretrained for English spee
 
 ## Repository contents and implementation
 
-The application implementation is being published from the `submission/wavelineage-complete` branch. The current repository's default branch contains the project handoff and API/frontend documentation. Until the complete application source is merged, treat this README as a project description—not as confirmation that the default branch is a runnable release.
+The complete application source is **not yet present in this public repository**. The prepared implementation package exists separately but has not been uploaded into the Git tree. The default branch currently contains this project overview, the license, and the API/frontend handoff documents only. Therefore, this repository is **not yet a runnable release**. Do not treat the test results below as CI results from this GitHub repository.
 
 ## Intended local setup
 
