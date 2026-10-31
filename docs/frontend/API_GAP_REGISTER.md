@@ -22,7 +22,8 @@ Reviewed against the live `docs/API_CONTRACT.md` and `docs/FRONTEND_HANDOFF.md` 
 - Accepts direct arrays or the `sources`/`items`/`results` list envelopes while the backend schema is finalized.
 - Normalizes the documented segment fields: `query_start`, `query_end`, `source_start`, `source_end`, `mean_cosine_similarity`, `status`.
 - If a response contains a `run_id` but no segments, it performs one read of `GET /runs/{run_id}`. It does not invent a polling cadence or terminal states.
-- Uses the report endpoint documented in the contract for `json` and `html` formats.
+- Uses the report endpoint documented in the contract for `json` and `html` formats, but downloads reports rather than opening backend HTML inline until output-sanitization and content-disposition behavior is confirmed.
+- Exports the manifest endpoint response as a JSON file; the exported key/signature materials remain subject to the trust limits documented by the backend.
 - Calls `/verify-manifest` only when all three documented inputs (`manifest`, `signature_base64`, `public_key_pem`) are present.
 
 These are compatibility tolerances for the MVP, not replacements for a strict, documented v1 schema.
