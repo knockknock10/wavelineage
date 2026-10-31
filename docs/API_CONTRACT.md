@@ -17,6 +17,7 @@ All endpoints are intended for loopback/local use. Uploads are multipart; respon
 - `GET /api/v1/sources`: list source summaries.
 - `GET /api/v1/sources/{source_id}`: metadata and integrity checks.
 - `GET /api/v1/sources/{source_id}/manifest`: public manifest, base64 signature and public key PEM.
+- `DELETE /api/v1/sources/{source_id}`: remove the local source folder and its associated alignment run reports. This is application-level deletion, not guaranteed secure erasure from SSD wear-leveling, filesystem snapshots or external backups.
 
 ## Alignment
 
@@ -48,7 +49,7 @@ Loading a profile means calibration-derived thresholds are in use. It does not i
 
 ## Error shape
 
-Expected upload/model/source failures return structured FastAPI `detail` objects with codes such as `FILE_TOO_LARGE`, `AUDIO_INVALID`, `MODEL_UNAVAILABLE`, `SOURCE_NOT_FOUND`, `SOURCE_INTEGRITY_FAILED` and `THRESHOLD_PROFILE_INVALID`.
+Expected upload/model/source failures return structured FastAPI `detail` objects with codes such as `FILE_TOO_LARGE`, `AUDIO_INVALID`, `MODEL_UNAVAILABLE`, `SOURCE_NOT_FOUND`, `SOURCE_INTEGRITY_FAILED`, `SOURCE_DELETE_REFUSED` and `THRESHOLD_PROFILE_INVALID`.
 
 ## Trust and limitations
 
