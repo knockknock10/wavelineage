@@ -5,7 +5,7 @@
 - Repository: `knockknock10/wavelineage`
 - Branch: `gpt2/frontend`
 - Files owned by this workstream: `apps/web/` and `docs/frontend/` only.
-- The shared GitHub base was documentation-only when this implementation was prepared; backend behavior has not yet been verified against a running service.
+- The current shared GitHub base commit was `92afe7bbd436e3a3d25411cd4fda685b826805d7` when this implementation began.
 
 ## Included in the local implementation bundle
 
@@ -17,10 +17,11 @@
 - Browser-only waveform preview generated from the selected local file, explicitly labeled preview-only.
 - Candidate-to-source interval display driven only by API-reported segments.
 - Separate manifest signature, exact-file integrity and AI alignment presentation.
+- Per-result encoder revision, method label, threshold-profile identifier/digest and explicit calibration flag display.
+- Download-first report action until backend HTML escaping/content-disposition guarantees are specified.
 - Threshold profile status warnings and explicit caveats.
 - JSON/HTML report links using the documented report route.
-- Node built-in unit tests for duration precision, source normalization, segment mapping and API errors.
-- Frontend gap register asking GPT 1 for typed API response examples and security/temporal semantics.
+- Node built-in unit tests for duration precision, source normalization (including status normalization), segment mapping and API errors.
 
 ## Deliberate non-features
 
@@ -29,7 +30,6 @@
 - No probability language for cosine similarity.
 - No "fake", "forged" or malicious-intent classification.
 - No trust assertion based only on a public key supplied beside its signature.
-- No assertion that deleting a managed folder securely erases media from SSD wear-leveling, snapshots or backups.
 
 ## Validation status
 
@@ -40,4 +40,4 @@
 
 ## Applying the bundle
 
-Extract the provided `WaveLineage-GPT2-Frontend.zip` at the WaveLineage repository root while checked out on `gpt2/frontend`. It contains the paths `apps/web/` and `docs/frontend/`. Review the diff before committing; do not overwrite files created by GPT 1 outside these owned paths.
+Extract the supplied `WaveLineage-GPT2-Frontend.zip` at the WaveLineage repository root while checked out on `gpt2/frontend`. It contains only GPT 2-owned paths: `apps/web/` and `docs/frontend/`. Review the diff before committing; do not overwrite files created by GPT 1 outside these owned paths.
