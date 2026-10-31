@@ -15,12 +15,13 @@ See [API_CONTRACT.md](../API_CONTRACT.md). Main routes:
 - `GET /api/v1/sources`
 - `GET /api/v1/sources/{source_id}`
 - `GET /api/v1/sources/{source_id}/manifest`
+- `DELETE /api/v1/sources/{source_id}` (removes local source and associated run reports; not guaranteed secure erasure)
 - `POST /api/v1/align` (multipart `source_id`, `file`)
 - `GET /api/v1/runs/{run_id}`
 - `GET /api/v1/runs/{run_id}/report?format=json|html`
 
 ## Required UI states
-1. Local Source Library: list sealed references, model identity, manifest integrity/signature status.
+1. Local Source Library: list sealed references, model identity, manifest integrity/signature status; allow deletion after an explicit confirmation.
 2. Seal Source: file upload, duration/metadata, real stage progress, error handling.
 3. Verify Candidate: source picker, candidate upload, alignment result.
 4. Evidence timeline: query/candidate time mapped against source time; distinguish matched, uncertain, unmatched. Show discontinuities as observations only.
@@ -34,6 +35,7 @@ See [API_CONTRACT.md](../API_CONTRACT.md). Main routes:
 - Exact-file identity, manifest signature validity and semantic alignment are three different things. Show them separately.
 - Do not label unmatched audio "fake" or "forged".
 - Do not imply reference authenticity, speaker identity, statement truth or capture context.
+- Deleting a source removes files from WaveLineage's managed directory and associated reports, but must not be described as guaranteed secure erasure from SSDs, snapshots or backups.
 - Do not fake upload progress or show mock alignment as real model output. If mocks are used during frontend work, label them conspicuously.
 
 ## Visual direction
