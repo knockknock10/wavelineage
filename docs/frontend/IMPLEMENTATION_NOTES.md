@@ -14,13 +14,13 @@
 - Source list loading and refresh with explicit offline/error/empty states.
 - Multipart source registration and candidate alignment requests.
 - Explicitly confirmed source deletion through the newly documented DELETE endpoint, with no secure-erasure promise.
+- Portable JSON export of the API-returned signed manifest from the source library and seal-success view.
 - Browser-only waveform preview generated from the selected local file, explicitly labeled preview-only.
-- Candidate-to-source interval display driven only by API-reported segments; malformed, negative, zero-length or partial intervals are not rendered as valid mappings.
+- Candidate-to-source interval display driven only by API-reported segments; malformed, negative, zero-length or partial intervals are not rendered as valid mappings. A `matched` status without a usable source interval, or an `unmatched` status with one, is downgraded to uncertain.
 - Separate manifest signature, exact-file integrity and AI alignment presentation; source changes clear any previous manifest-verification result.
 - Per-result encoder revision, method label, threshold-profile identifier/digest and explicit calibration flag display.
 - Download-first report action until backend HTML escaping/content-disposition guarantees are specified.
 - Threshold profile status warnings and explicit caveats.
-- JSON/HTML report links using the documented report route.
 - Node built-in unit tests for duration precision, source normalization (including status normalization), segment mapping and API errors.
 
 ## Deliberate non-features
